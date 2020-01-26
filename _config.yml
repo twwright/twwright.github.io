@@ -1,11 +1,11 @@
 # Site settings
 author: Thomas Wright
-title: 
+title: Twiddle Wakka
 header-img: img/home-bg.png
 email: twwright@gmail.com
 copyright_name: Thomas Wright
 description: > # this means to ignore newlines until "baseurl:"
-  
+  brief explorations of coding concepts
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  twwright
