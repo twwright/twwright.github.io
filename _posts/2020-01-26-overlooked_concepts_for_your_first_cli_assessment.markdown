@@ -1,12 +1,14 @@
 ---
 layout: post
 title:      "Overlooked Concepts for Your First CLI Assessment"
-date:       2020-01-26 05:16:54 +0000
+date:       2020-01-26 00:16:55 -0500
 permalink:  overlooked_concepts_for_your_first_cli_assessment
 ---
 
 
 Today I want to talk about my first CLI project for Flatiron School: [Foodexplorer](http://cli-project.twwright.repl.co). Specifically I want to cover a few mistakes you might make with your first Ruby project by talking about a few of mine and how I fixed them. On the way, we'll also cover some fundamental things to know about executing Ruby, and some questions that came up in my very first code assessment with Flatiron School! Let's dig in.
+
+*For more like this, follow me on [dev.to](http://dev.to/twiddlewakka)!*
 
 ### Single Responsibility Principle
 The single responsiblity principle says that every class, module, or method should be responsible for **one** thing---in other words, an object should be responsible for a single unit of work. What did this look like in Foodexplorer? It is the responsibility of the `CLI` class to handle user input/output. It is the responsibility of the `Product` class to create and report itself. It is the job of the `Cabinet` class to keep track of its associated products. My mistake early on was thinking that the `Product` class should report its own status, and while this is *sort of true* its truly a violation of this principle of responsibility. The `CLI` class handles input/output. It's not my `Product` class's responsibility to interface with the user; it's the responsibiltiy of the command line *interface*. Understanding this was a huge revelation when it came to the architecture of my application and how methods should be distributed between classes. It led to a huge minimization in my `Product` and `Cabinet` class since their responsibilities were, on the whole, limited. 
