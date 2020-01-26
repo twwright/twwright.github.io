@@ -6,7 +6,11 @@ permalink:  overlooked_concepts_for_your_first_cli_assessment
 ---
 
 
-Today I want to talk about my first CLI project for Flatiron School: [Foodexplorer](http://cli-project.twwright.repl.co). Specifically I want to cover a few mistakes you might make with your first Ruby project by talking about a few of mine and how I fixed them. On the way, we'll also cover some fundamental things to know about executing Ruby, and some questions that came up in my very first code assessment with Flatiron School! Let's dig in.
+Today I want to talk about my first CLI project for Flatiron School: [Foodexplorer](http://cli-project.twwright.repl.co).  I want to cover a few mistakes you might make with your first Ruby project by talking about a few of mine and how I fixed them. On the way, we'll also cover some fundamental things to know about executing Ruby, and some questions that came up in my very first code assessment with Flatiron School!
+
+You can familiarize yourself with my project by following the link, checking out the code, or running it on repl.it. However, the advice below is mostly general with examples drawn from my own refactors and codebase for Foodexplorer. While it may be beneficial to check out my code, Ive tried to provide snippets as often as possible to help contextualize things. To put it briefly: Foodexplorer is a command line tool that lets the user navigate through cabinets, create random grocery products, and find out nutritional information about those products. It's a command line version of exploring your kitchen as a kid and finding random products, with the added adult twist of knowing the nutrition data of those items. There are three classes, `CLI`, `Product`, and `Cabinet`. Their functions are what you'd imagine in real life: command-line interface handles input/output, products have nutritional data and belong to cabinets, cabinets have products inside of them (although some are empty!). Simple, right? Right!
+
+This simple project can teach us a lot about good object-oriented design principles and some fundamental programming concepts. Okay, let's dig in!
 
 *For more like this, follow me on [dev.to](http://dev.to/twiddlewakka)!*
 
