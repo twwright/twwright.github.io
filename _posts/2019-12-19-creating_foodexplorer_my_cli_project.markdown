@@ -5,7 +5,6 @@ date:       2019-12-19 00:16:55 -0500
 permalink:  creating_foodexplorer_my_cli_project
 ---
 
-### __The Original Intent__
 My intent was to design a simple command line application, called __Macrocounter__, that could calculate a person's recommended macronutrient ratio for their specific fitness or weight-loss goals. Typically this is broken into three categories: lose weight, maintain weight, gain weight. There's research behind the approach of balancing our intake of proteins, carbs, and fats that support different fitness-specific goals. Using some fun little math formulas developed by researchers, we can take in a user's attributes (hereafter: attr) and use that to calculate their macronutrient ratio. From there, users would then be able to search for a food, display it's macronutrient content, log it to their daily food list, and it would calculate their current intake of nutrients vs their allowable intake. The set-up was simple, and the objectives achievable:
 
 - Create a `User` class with an `attr_accessor` for name, age, weight, height, goal. Use a formula to determine their ideal macronutrient ratio and set that as a `:ratio` attr.
