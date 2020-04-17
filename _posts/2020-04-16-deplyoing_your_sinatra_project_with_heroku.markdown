@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "Deplyoing your Sinatra project with Heroku"
+title:      "Deploying your Sinatra project with Heroku"
 date:       2020-04-16 23:08:42 -0400
 permalink:  deplyoing_your_sinatra_project_with_heroku
 ---
