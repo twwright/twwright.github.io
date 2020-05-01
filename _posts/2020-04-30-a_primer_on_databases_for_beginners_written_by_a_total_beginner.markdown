@@ -2,7 +2,7 @@
 layout: post
 title:      "A Primer on Databases for Beginners (Written by a Total Beginner)"
 date:       2020-05-01 02:45:52 +0000
-permalink:  a_primer_on_databases_for_beginners_written_by_a_total_beginner
+permalink:  a_primer_on_databases_for_beginners_written_by_a_total_beginner.html
 ---
 
 
