@@ -1,12 +1,12 @@
 ---
 layout: post
 title:      "The New WSL 2 is 20x Faster?! A User's Installation Guide"
-date:       2020-05-08 16:39:19 +0000
+date:       2020-05-08 12:39:20 -0400
 permalink:  the_new_wsl_2_is_20x_faster_a_users_installation_guide
 ---
 
 
-The content of your blog post goes here.Windows has finally released WSL 2, and it's *smooooooooth*. Microsoft describes it as such: "WSL 2 is a major overhaul of the underlying architecture and uses virtualization technology and a Linux kernel to enable its new features." 
+Windows has finally released WSL 2, and it's *smooooooooth*. Microsoft describes it as such: "WSL 2 is a major overhaul of the underlying architecture and uses virtualization technology and a Linux kernel to enable its new features." 
 
 If you're like me, you found the first iteration of WSL to be an absolute slog. Slow, unruly, resource-heavy, and sometimes just downright buggy. Fortunately, Windows has delivered us an update that fixes tons of these issues, with reported speed boosts of anywhere between 3-6x faster (when running `git` commands, setting up libraries, and more) to 13x-20x faster (miscellaneous filesystem commands, such as unzipping `tar` volumes). That's a performance boost that is **way** worth the upgrade! After installing, I can definitely confirm: WSL 2 is *faaaaaaaast*. Like, way faster. A `bundle install` in Rails takes only a few seconds, where on WSL 1 it could sometimes take actual minutes. If you're ready for that kind of upgrade, follow along with the steps below!
 
