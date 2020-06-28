@@ -5,7 +5,7 @@ header-img: img/home-bg.png
 email: twwright@gmail.com
 copyright_name: Thomas Wright
 description: > # this means to ignore newlines until "baseurl:"
-  brief explorations of coding concepts
+  full-stack software engineer
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: BeingLogical
 github_username:  twwright
