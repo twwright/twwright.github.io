@@ -1,6 +1,6 @@
 # Site settings
 author: Thomas Wright
-title: Twiddle Wakka
+title: Thomas Wright
 header-img: img/home-bg.png
 email: twwright@gmail.com
 copyright_name: Thomas Wright
@@ -11,7 +11,7 @@ twitter_username: BeingLogical
 github_username:  twwright
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
 highlighter: rouge
 permalink: pretty
 paginate: 5
