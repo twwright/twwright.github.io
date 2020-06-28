@@ -12,9 +12,12 @@ github_username:  twwright
 
 # Build settings
 markdown: redcarpet
+redcarpet:
+    extensions: [no_intra_emphasis, tables, fenced_code_blocks, strikethrough, underline, highlight, autolink]
 highlighter: rouge
 permalink: pretty
 paginate: 5
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
 
 gems: [jekyll-paginate, jekyll-feed]
