@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Quickly Open a File in the Browser from WSL"
-date:       2020-10-17 19:55:42 +0000
+date:       2020-10-17 15:55:43 -0400
 permalink:  quickly_open_a_file_in_the_browser_from_wsl
 ---
 
