@@ -1,5 +1,386 @@
----
-layout: page
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Wright - Technical Solutions Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="fixed-header" id="fixed-header">
+        <div class="container">
+            <div class="header-left">
+                <div class="profile-flip-container" id="profile-flip">
+                    <div class="profile-flip-inner">
+                        <img src="https://media.licdn.com/dms/image/v2/D4E03AQHxKa3e10G4mQ/profile-displayphoto-scale_200_200/B4EZkcFmv6KgAY-/0/1757112857464?e=1762992000&v=beta&t=yYJfJrJUQERbvtIJ2Q_pZB_dPDLtsjlHBPzJdU3PXs4" alt="Thomas Wright" class="header-profile-image profile-front">
+                        <img src="https://avatars.githubusercontent.com/u/2465794?v=4" alt="Thomas Wright - Fun Mode" class="header-profile-image profile-back">
+                    </div>
+                </div>
+                <h1 class="header-name">Thomas Wright</h1>
+            </div>
+            <nav class="header-nav">
+                <button class="nav-btn active" data-section="home">Home</button>
+                <button class="nav-btn" data-section="experience">Experience</button>
+                <button class="nav-btn" data-section="projects">Projects</button>
+                <button class="nav-btn" data-section="background">Background</button>
+                <button class="nav-btn" data-section="chat">Chat</button>
+                <button class="nav-btn" data-section="contact">Contact</button>
+            </nav>
+        </div>
+    </header>
 
-<p>Welcome to the (very-very-much-a-work-in-progress) portfolio site of Thomas Wright, a software engineering student at the Flatiron School.</p>
+    <main class="main-content">
+        <section id="home" class="content-section active">
+            <div class="hero-container">
+                <div class="hero-header">
+                    <div class="hero-profile">
+                        <div class="profile-flip-container hero-profile-flip" id="hero-profile-flip">
+                            <div class="profile-flip-inner">
+                                <img src="https://media.licdn.com/dms/image/v2/D4E03AQHxKa3e10G4mQ/profile-displayphoto-scale_200_200/B4EZkcFmv6KgAY-/0/1757112857464?e=1762992000&v=beta&t=yYJfJrJUQERbvtIJ2Q_pZB_dPDLtsjlHBPzJdU3PXs4" alt="Thomas Wright" class="profile-image profile-front">
+                                <img src="https://avatars.githubusercontent.com/u/2465794?v=4" alt="Thomas Wright - Fun Mode" class="profile-image profile-back">
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="hero-name">Thomas Wright</h1>
+                </div>
+                <p class="hero-title">Technical Solutions Engineer</p>
+                <nav class="header-nav">
+                    <button class="nav-btn" data-section="experience">Experience</button>
+                    <button class="nav-btn" data-section="projects">Projects</button>
+                    <button class="nav-btn" data-section="background">Background</button>
+                    <button class="nav-btn" data-section="chat">Chat</button>
+                    <button class="nav-btn" data-section="contact">Contact</button>
+                </nav>
+            </div>
+        </section>
+
+        <section id="experience" class="content-section">
+            <div class="container">
+                <h2 class="section-title">Experience</h2>
+                <div class="experience-list">
+                    <a href="https://www.stackadapt.com" target="_blank" rel="noopener" class="card experience-card">
+                        <div class="experience-header">
+                            <img src="https://cdn-public.softwarereviews.com/production/favicons/offerings/10244/original/stackadapt-300x300.png.png" alt="StackAdapt" class="company-logo stackadapt-logo" onerror="this.style.display='none'">
+                            <div class="experience-content">
+                                <h3 class="company-name">StackAdapt</h3>
+                                <p class="job-title">Technical Solutions Engineer</p>
+                                <p class="job-description">Pre and post sales technical guidance for adtech and martech clients on platform, pixels, server-side tracking, APIs, and integrations</p>
+                            </div>
+                        </div>
+                        <span class="job-period">Toronto, Canada (Remote) / June 2023 - Present</span>
+                    </a>
+
+                    <div class="mindbody-stack-container">
+                        <a href="https://www.mindbodyonline.com" target="_blank" rel="noopener" class="card experience-card mindbody-card" data-role="tam">
+                            <div class="experience-header">
+                                <img src="https://brandfetch.com/_next/image?url=https%3A%2F%2Fbrandfetch.cdn.prismic.io%2Fbrandfetch%2FaBtEAidWJ-7kRtER_mindbody-full-logo-lock-up-charcoal.svg&w=256&q=75" alt="Mindbody" class="company-logo mindbody-logo" onerror="this.style.display='none'">
+                                <div class="experience-content">
+                                    <h3 class="company-name">Mindbody</h3>
+                                    <p class="job-title">Technical Account Manager</p>
+                                    <p class="job-description">Strategic enterprise accounts handling configuration, API integrations, and incident triage with cross-team coordination</p>
+                                </div>
+                            </div>
+                            <span class="job-period">San Luis Obispo, CA (Remote) / Jan 2023 - June 2023</span>
+                        </a>
+
+                        <a href="https://www.mindbodyonline.com" target="_blank" rel="noopener" class="card experience-card mindbody-card" data-role="im">
+                            <div class="experience-header">
+                                <img src="https://brandfetch.com/_next/image?url=https%3A%2F%2Fbrandfetch.cdn.prismic.io%2Fbrandfetch%2FaBtEAidWJ-7kRtER_mindbody-full-logo-lock-up-charcoal.svg&w=256&q=75" alt="Mindbody" class="company-logo mindbody-logo" onerror="this.style.display='none'">
+                                <div class="experience-content">
+                                    <h3 class="company-name">Mindbody</h3>
+                                    <p class="job-title">Implementation Manager</p>
+                                    <p class="job-description">Led end-to-end client implementations from scoping and configuration through training, UAT, and go-live</p>
+                                </div>
+                            </div>
+                            <span class="job-period">San Luis Obispo, CA (Remote) / June 2022 - Jan 2023</span>
+                        </a>
+
+                        <a href="https://www.mindbodyonline.com" target="_blank" rel="noopener" class="card experience-card mindbody-card" data-role="sos">
+                            <div class="experience-header">
+                                <img src="https://brandfetch.com/_next/image?url=https%3A%2F%2Fbrandfetch.cdn.prismic.io%2Fbrandfetch%2FaBtEAidWJ-7kRtER_mindbody-full-logo-lock-up-charcoal.svg&w=256&q=75" alt="Mindbody" class="company-logo mindbody-logo" onerror="this.style.display='none'">
+                                <div class="experience-content">
+                                    <h3 class="company-name">Mindbody</h3>
+                                    <p class="job-title">Senior Onboarding Specialist</p>
+                                    <p class="job-description">Managed onboarding projects guiding customers through setup, data mapping, and platform training</p>
+                                </div>
+                            </div>
+                            <span class="job-period">San Luis Obispo, CA (Remote) / Feb 2022 - June 2022</span>
+                        </a>
+                    </div>
+
+                    <a href="https://www.vic.ai" target="_blank" rel="noopener" class="card experience-card">
+                        <div class="experience-header">
+                            <img src="https://avatars.githubusercontent.com/u/28715064?s=200&v=4" alt="Vic AI" class="company-logo vic-logo" onerror="this.style.display='none'">
+                            <div class="experience-content">
+                                <h3 class="company-name">Vic AI</h3>
+                                <p class="job-title">Support Engineer (Contract)</p>
+                                <p class="job-description">Delivered product support for an AI finance platform including issue diagnosis, documentation, and enablement</p>
+                            </div>
+                        </div>
+                        <span class="job-period">New York, NY (Remote) / Dec 2022 - Mar 2023</span>
+                    </a>
+
+                    <a href="https://www.crossfit.com" target="_blank" rel="noopener" class="card experience-card">
+                        <div class="experience-header">
+                            <img src="https://www.airthings.com/hs-fs/hubfs/Website/Images/b2b-partner-logos/crossfit-logo-white.png?width=1000&height=264&name=crossfit-logo-white.png" alt="CrossFit LLC" class="company-logo crossfit-logo" onerror="this.style.display='none'">
+                            <div class="experience-content">
+                                <h3 class="company-name">CrossFit LLC</h3>
+                                <p class="job-title">Customer Success Manager</p>
+                                <p class="job-description">Worked with a central pod supporting all 15,000 affiliates on billing, CRM, and operations workflows</p>
+                            </div>
+                        </div>
+                        <span class="job-period">Boulder, CO (Remote) / Feb 2021 - Feb 2022</span>
+                    </a>
+
+                    <a href="https://www.friscosportstx.com" target="_blank" rel="noopener" class="card experience-card">
+                        <div class="experience-header">
+                            <img src="https://pbs.twimg.com/profile_images/987018819464916992/DZ6V47so_400x400.jpg" alt="Frisco Sports Center" class="company-logo" onerror="this.style.display='none'">
+                            <div class="experience-content">
+                                <h3 class="company-name">Frisco Sports Center</h3>
+                                <p class="job-title">Senior Project Manager</p>
+                                <p class="job-description">Directed a team delivering client marketing and web projects coordinating production, timelines, and stakeholders</p>
+                            </div>
+                        </div>
+                        <span class="job-period">Dallas, TX / Aug 2016 - Feb 2021</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="content-section">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-grid">
+                    <a href="https://github.com/twwright/container-inspector" target="_blank" rel="noopener" class="card project-card">
+                        <div class="project-header">
+                            <h3 class="project-name">container-inspector</h3>
+                            <span class="project-lang">JavaScript</span>
+                        </div>
+                        <p class="project-description">Scan for GTM containers and StackAdapt tags, showing firing status with quick links to inspect tags, triggers, and variables</p>
+                    </a>
+
+                    <a href="https://browser.fyi" target="_blank" rel="noopener" class="card project-card">
+                        <div class="project-header">
+                            <h3 class="project-name">browser.fyi</h3>
+                            <span class="project-lang">JavaScript</span>
+                        </div>
+                        <p class="project-description">A one-click page that shows your browser and system details with a shareable link for debugging and support</p>
+                    </a>
+
+                    <a href="https://slackscrub.tiiny.co/" target="_blank" rel="noopener" class="card project-card">
+                        <div class="project-header">
+                            <h3 class="project-name">slackscrub</h3>
+                            <span class="project-lang">JavaScript</span>
+                        </div>
+                        <p class="project-description">A tiny web app that cleans and formats Slack conversations for prettier copy/paste</p>
+                    </a>
+
+                    <a href="https://github.com/twwright/tstoolsx" target="_blank" rel="noopener" class="card project-card">
+                        <div class="project-header">
+                            <h3 class="project-name">tstoolsx</h3>
+                            <span class="project-lang">JavaScript</span>
+                        </div>
+                        <p class="project-description">Chrome extension to streamline support workflows for troubleshooting within FreshService, Grafana, and Elasticsearch</p>
+                    </a>
+
+                    <a href="https://bitwarden.tiiny.co/" target="_blank" rel="noopener" class="card project-card">
+                        <div class="project-header">
+                            <h3 class="project-name">pw-cleaner</h3>
+                            <span class="project-lang">JavaScript</span>
+                        </div>
+                        <p class="project-description">Clean up your Bitwarden vault by identifying and removing duplicate logins across domains</p>
+                    </a>
+
+                    <a href="https://github.com/twwright/cidr-converter" target="_blank" rel="noopener" class="card project-card">
+                        <div class="project-header">
+                            <h3 class="project-name">cidr-converter</h3>
+                            <span class="project-lang">HTML</span>
+                        </div>
+                        <p class="project-description">Quickly convert between IP ranges and CIDR notation, showing start/end addresses and prefix length</p>
+                    </a>
+
+                    <a href="https://chromewebstore.google.com/detail/blurry-bear/pdlpiilhojoojfnloojeocoimccggmkj?hl=en" target="_blank" rel="noopener" class="card project-card">
+                        <div class="project-header">
+                            <h3 class="project-name">blurry bear</h3>
+                            <span class="project-lang">JavaScript</span>
+                        </div>
+                        <p class="project-description">Quickly blur selected text in your browser to prevent sharing PII in screenshots and screen shares</p>
+                    </a>
+
+                    <a href="https://github.com/twwright/notenice" target="_blank" rel="noopener" class="card project-card">
+                        <div class="project-header">
+                            <h3 class="project-name">notenice</h3>
+                            <span class="project-lang">Ruby</span>
+                        </div>
+                        <p class="project-description">A Sinatra web app to collaborate on notes <br>// Flatiron School (2020)</p>
+                    </a>
+
+                    <a href="https://github.com/twwright/foodexplorer" target="_blank" rel="noopener" class="card project-card">
+                        <div class="project-header">
+                            <h3 class="project-name">foodexplorer</h3>
+                            <span class="project-lang">Ruby</span>
+                        </div>
+                        <p class="project-description">Nutritional data from a CLI in pure Ruby <br> // Flatiron School (2020)</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="background" class="content-section">
+            <div class="container">
+                <h2 class="section-title">Background</h2>
+                
+                <div class="background-section">
+                    <h3 class="background-subtitle">Education</h3>
+                    <div class="card education-card">
+                        <h4 class="degree-name">B.A. Computational Linguistics, Philosophy</h4>
+                        <p class="degree-minor">Minor: Cognitive Science</p>
+                        <p class="school-name">Hofstra University</p>
+                        <p class="school-location">Hempstead, NY • August 2008 - May 2012</p>
+                        <p class="thesis">Honors Thesis: "Quantificational Semantics and Ontology: Symbolizing Logical Representations of Semantics in Natural Language"</p>
+                    </div>
+                </div>
+
+                <div class="background-section">
+                    <h3 class="background-subtitle">Certifications</h3>
+                    <div class="cert-grid">
+                        <a href="https://www.pendo.io" target="_blank" rel="noopener" class="cert-item">
+                            <span class="cert-name">AI for Product Management</span>
+                            <span class="cert-org">Pendo</span>
+                            <span class="cert-date">Sep 2025</span>
+                        </a>
+                        <a href="https://aws.amazon.com/training/" target="_blank" rel="noopener" class="cert-item">
+                            <span class="cert-name">AWS Machine Learning Foundations</span>
+                            <span class="cert-org">Amazon Web Services</span>
+                            <span class="cert-date">Sep 2025</span>
+                        </a>
+                        <a href="https://www.udacity.com" target="_blank" rel="noopener" class="cert-item">
+                            <span class="cert-name">Gemini API by Google</span>
+                            <span class="cert-org">Udacity</span>
+                            <span class="cert-date">Aug 2025</span>
+                        </a>
+                        <a href="https://www.udacity.com" target="_blank" rel="noopener" class="cert-item">
+                            <span class="cert-name">Generative AI with AWS</span>
+                            <span class="cert-org">Udacity</span>
+                            <span class="cert-date">Aug 2025</span>
+                        </a>
+                        <a href="https://www.pendo.io" target="_blank" rel="noopener" class="cert-item">
+                            <span class="cert-name">Product Management</span>
+                            <span class="cert-org">Pendo</span>
+                            <span class="cert-date">Aug 2025</span>
+                        </a>
+                        <a href="https://www.stackadapt.com" target="_blank" rel="noopener" class="cert-item">
+                            <span class="cert-name">Platform Certification</span>
+                            <span class="cert-org">StackAdapt</span>
+                            <span class="cert-date">Aug 2025</span>
+                        </a>
+                        <a href="https://www.mediaocean.com" target="_blank" rel="noopener" class="cert-item">
+                            <span class="cert-name">Flashtalking Campaign Management</span>
+                            <span class="cert-org">Mediaocean</span>
+                            <span class="cert-date">Apr 2025</span>
+                        </a>
+                        <a href="https://www.stackadapt.com" target="_blank" rel="noopener" class="cert-item">
+                            <span class="cert-name">Advanced Programmatic Advertising</span>
+                            <span class="cert-org">StackAdapt</span>
+                            <span class="cert-date">June 2023</span>
+                        </a>
+                        <a href="https://www.udacity.com" target="_blank" rel="noopener" class="cert-item">
+                            <span class="cert-name">Software Engineering Nanodegree</span>
+                            <span class="cert-org">Udacity x Cognizant</span>
+                            <span class="cert-date">Mar 2022</span>
+                        </a>
+                        <a href="https://flatironschool.com" target="_blank" rel="noopener" class="cert-item">
+                            <span class="cert-name">Full Stack Software Engineering</span>
+                            <span class="cert-org">Flatiron School</span>
+                            <span class="cert-date">Oct 2020</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="background-section">
+                    <h3 class="background-subtitle">Skills</h3>
+                    <div class="skills-grid">
+                        <div class="card skill-card">
+                            <h4 class="skill-category">Languages / Frameworks</h4>
+                            <p class="skill-list">JavaScript, TypeScript, Python, SQL, Ruby, Go, React, Java</p>
+                        </div>
+
+                        <div class="card skill-card">
+                            <h4 class="skill-category">APIs / Data</h4>
+                            <p class="skill-list">GraphQL, REST, Webhooks, SDKs, BigQuery, Snowflake</p>
+                        </div>
+
+                        <div class="card skill-card">
+                            <h4 class="skill-category">AdTech / MarTech</h4>
+                            <p class="skill-list">Pixels, Server-side postbacks, Attribution, Google Tag Manager, Mobile measurements, DNS</p>
+                        </div>
+
+                        <div class="card skill-card">
+                            <h4 class="skill-category">Observability / Ops</h4>
+                            <p class="skill-list">Grafana, Sentry, Elastic, Kibana, MariaDB, Redis, SQLite, FullStory, AWS, Datadog</p>
+                        </div>
+
+                        <div class="card skill-card">
+                            <h4 class="skill-category">Generative AI / Automation</h4>
+                            <p class="skill-list">OpenAI API, Gemini, Claude, RAG, spaCy, Puppeteer, Katalon, TestQuality, NLP</p>
+                        </div>
+
+                        <div class="card skill-card">
+                            <h4 class="skill-category">Platforms</h4>
+                            <p class="skill-list">Google Analytics, Looker, Shopify, HubSpot, Intercom, Zendesk, FreshService, Salesforce, NetSuite, Stripe, Zapier, Confluence, Jira</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="chat" class="content-section">
+            <div class="container">
+                <h2 class="section-title">Chat</h2>
+                <div class="chat-placeholder">
+                    <p>Chat functionality coming soon...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <div class="contact-wrapper">
+                    <form action="https://formsubmit.co/twright@hey.com" method="POST" class="contact-form madlib-form">
+                        <input type="hidden" name="_subject" value="New Portfolio Contact!">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="message" id="hidden-message">
+                        
+                        <div class="madlib-text">
+                            <span class="madlib-static">Hello, my name is </span><input type="text" id="madlib-name" name="name" required placeholder="your name" class="madlib-input" size="15"><span class="madlib-static">. The reason I am writing you is </span><input type="text" id="madlib-reason" required placeholder="to discuss an opportunity" class="madlib-input" size="30"><span class="madlib-static">. You can reach back to me via email at </span><input type="email" id="madlib-email" name="email" required placeholder="you@example.com" class="madlib-input" size="25"><span class="madlib-static"> or my socials at </span><input type="text" id="madlib-socials" placeholder="linkedin.com/in/yourname" class="madlib-input" size="25"><span class="madlib-static"> if you prefer. Talk to you soon!</span>
+                        </div>
+
+                        <button type="submit" class="btn btn-submit">Send Message →</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fixed-footer">
+        <div class="container">
+            <p>made with <span id="footer-emoji">⚡</span> by <a href="http://linkedin.com/in/wrightclick" target="_blank" class="footer-link">thomas</a></p>
+            <div class="contact-popup">
+                <div class="contact-row">
+                    <a href="mailto:twright@hey.com" class="contact-link">twright@hey.com</a>
+                    <span class="contact-separator">|</span>
+                    <a href="http://linkedin.com/in/wrightclick" class="contact-link" target="_blank">LinkedIn</a>
+                    <span class="contact-separator">|</span>
+                    <a href="https://github.com/twwright" class="contact-link" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
