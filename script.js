@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initCardAnimations();
     initProfileFlip();
     initHamburgerMenu();
+    initMindbodyStackDates();
 });
 
 function initSinglePageApp() {
@@ -225,6 +226,64 @@ function initHamburgerMenu() {
             hamburger.classList.remove('active');
             headerNav.classList.remove('active');
         }
+    });
+}
+
+function initMindbodyStackDates() {
+    const stackContainer = document.querySelector('.mindbody-stack-container');
+    if (!stackContainer) return;
+    
+    const combinedPeriod = stackContainer.getAttribute('data-combined-period');
+    const cards = stackContainer.querySelectorAll('.mindbody-card');
+    const jobPeriods = stackContainer.querySelectorAll('.job-period');
+    
+    // Check if we're on desktop (not mobile)
+    function isDesktop() {
+        return window.innerWidth > 768;
+    }
+    
+    // Function to show combined date on all cards
+    function showCombinedDate() {
+        if (isDesktop()) {
+            jobPeriods.forEach(period => {
+                period.textContent = combinedPeriod;
+            });
+        }
+    }
+    
+    // Function to restore individual dates
+    function showIndividualDates() {
+        jobPeriods.forEach(period => {
+            const individualPeriod = period.getAttribute('data-individual-period');
+            period.textContent = individualPeriod;
+        });
+    }
+    
+    // Initialize with correct dates based on viewport
+    if (isDesktop()) {
+        showCombinedDate();
+        
+        // On hover, show individual dates
+        stackContainer.addEventListener('mouseenter', showIndividualDates);
+        
+        // On mouse leave, show combined date again
+        stackContainer.addEventListener('mouseleave', showCombinedDate);
+    } else {
+        // On mobile, always show individual dates
+        showIndividualDates();
+    }
+    
+    // Handle window resize
+    let resizeTimer;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() {
+            if (isDesktop()) {
+                showCombinedDate();
+            } else {
+                showIndividualDates();
+            }
+        }, 250);
     });
 }
 

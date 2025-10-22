@@ -687,7 +687,7 @@ p {
 .experience-content {
     flex: 1;
     position: relative;
-    padding-right: 160px;
+    padding-right: 200px;
 }
 
 .experience-card::before {
@@ -799,21 +799,21 @@ p {
     padding: 0.25rem 0.5rem;
     border-radius: 0px;
     display: inline-block;
-    margin-top: var(--spacing-xs);
+    margin-top: 0;
     margin-left: 0;
     flex-shrink: 0;
     transition: all 0.2s ease;
     cursor: pointer;
     position: absolute;
-    right: var(--spacing-md);
-    top: 50%;
-    transform: translateY(-50%);
+    right: var(--spacing-sm);
+    top: var(--spacing-sm);
+    transform: translateY(0);
 }
 
 .experience-card:hover .job-period {
     background: var(--color-dark);
     color: var(--color-bg);
-    transform: translateY(-50%) rotate(-2deg);
+    transform: rotate(-2deg);
 }
 
 
@@ -821,6 +821,19 @@ p {
 .mindbody-stack-container {
     position: relative;
     margin: var(--spacing-xs) 0;
+}
+
+/* Show combined date when stacked (non-hover) - handled by JS */
+.mindbody-stack-container .mindbody-card:nth-child(2) .job-period,
+.mindbody-stack-container .mindbody-card:nth-child(3) .job-period {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mindbody-stack-container:hover .mindbody-card:nth-child(2) .job-period,
+.mindbody-stack-container:hover .mindbody-card:nth-child(3) .job-period {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .mindbody-card {
@@ -1323,7 +1336,7 @@ p {
     
     .fixed-header .header-nav {
         position: absolute;
-        top: 100%;
+        top: 145%;
         left: 0;
         right: 0;
         background: var(--color-bg);
@@ -1459,6 +1472,13 @@ p {
         transform: translateX(0px) rotate(0deg);
         margin-top: 0;
         margin-bottom: 0;
+    }
+    
+    /* Show all job periods on mobile */
+    .mindbody-stack-container .mindbody-card:nth-child(2) .job-period,
+    .mindbody-stack-container .mindbody-card:nth-child(3) .job-period {
+        opacity: 1;
+        pointer-events: auto;
     }
 }
 
