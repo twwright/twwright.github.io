@@ -95,6 +95,10 @@ body.colorful-mode .header-name {
     color: #DF584D;
 }
 
+body.colorful-mode .hamburger span {
+    background: var(--color-primary);
+}
+
 body.colorful-mode .background-subtitle {
     background: linear-gradient(120deg, #E15E9E 0%, #E15E9E 100%);
 }
@@ -416,6 +420,40 @@ p {
     margin: 0;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 101;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background: var(--color-dark);
+    border-radius: 0px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
 .header-nav {
     display: flex;
     gap: var(--spacing-sm);
@@ -646,6 +684,12 @@ p {
     margin-bottom: 0;
 }
 
+.experience-content {
+    flex: 1;
+    position: relative;
+    padding-right: 160px;
+}
+
 .experience-card::before {
     content: '';
     position: absolute;
@@ -755,17 +799,21 @@ p {
     padding: 0.25rem 0.5rem;
     border-radius: 0px;
     display: inline-block;
-    margin-top: 0;
-    margin-left: auto;
+    margin-top: var(--spacing-xs);
+    margin-left: 0;
     flex-shrink: 0;
     transition: all 0.2s ease;
     cursor: pointer;
+    position: absolute;
+    right: var(--spacing-md);
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .experience-card:hover .job-period {
     background: var(--color-dark);
     color: var(--color-bg);
-    transform: rotate(-2deg);
+    transform: translateY(-50%) rotate(-2deg);
 }
 
 
@@ -1263,19 +1311,59 @@ p {
     }
     
     .fixed-header .container {
-        flex-direction: column;
-        gap: var(--spacing-sm);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
     }
     
-    .header-nav {
+    .hamburger {
+        display: flex;
+    }
+    
+    .fixed-header .header-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--color-bg);
+        border-top: var(--border-width) var(--border-style);
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    
+    .fixed-header .header-nav.active {
+        max-height: 400px;
+        padding: var(--spacing-sm) 0;
+    }
+    
+    .fixed-header .nav-btn {
+        font-size: 0.9rem;
+        padding: var(--spacing-sm) var(--spacing-md);
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 0;
+        text-align: left;
+        width: 100%;
+    }
+    
+    .fixed-header .nav-btn:last-child {
+        border-bottom: none;
+    }
+    
+    .hero-nav {
         flex-wrap: wrap;
         justify-content: center;
         gap: var(--spacing-xs);
     }
     
-    .nav-btn {
-        font-size: 0.7rem;
-        padding: 0.25rem 0.5rem;
+    .hero-nav .nav-btn {
+        font-size: 0.75rem;
+        padding: var(--spacing-xs) var(--spacing-sm);
     }
     
     .hero-container {
@@ -1299,17 +1387,45 @@ p {
         margin-bottom: var(--spacing-md);
     }
     
-    .experience-header {
+    .experience-card {
         flex-direction: column;
+    }
+    
+    .experience-header {
+        flex-direction: row;
         align-items: flex-start;
+        width: 100%;
+        margin-bottom: 0;
+    }
+    
+    .experience-content {
+        padding-right: 0;
     }
     
     .experience-list {
-        gap: var(--spacing-xs);
+        gap: var(--spacing-md);
+    }
+    
+    .experience-list > .mindbody-stack-container {
+        margin-bottom: 0;
     }
     
     .job-period {
+        position: static;
+        transform: none;
         align-self: flex-start;
+        white-space: normal;
+        text-align: left;
+        line-height: 1.4;
+        max-width: 100%;
+        margin-left: 0;
+        margin-top: var(--spacing-xs);
+        margin-bottom: 0;
+        display: block;
+    }
+    
+    .experience-card:hover .job-period {
+        transform: rotate(-2deg);
     }
     
     .skills-grid {
@@ -1318,6 +1434,31 @@ p {
     
     .cert-grid {
         grid-template-columns: 1fr;
+    }
+    
+    /* Unstack Mindbody cards on mobile with consistent spacing */
+    .mindbody-stack-container {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .mindbody-card:nth-child(1) {
+        transform: translateX(0px) rotate(0deg);
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    
+    .mindbody-card:nth-child(2) {
+        transform: translateX(0px) rotate(0deg);
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+    .mindbody-card:nth-child(3) {
+        transform: translateX(0px) rotate(0deg);
+        margin-top: 0;
+        margin-bottom: 0;
     }
 }
 

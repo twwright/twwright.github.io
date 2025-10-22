@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initMadlibForm();
     initCardAnimations();
     initProfileFlip();
+    initHamburgerMenu();
 });
 
 function initSinglePageApp() {
@@ -194,6 +195,37 @@ function initProfileFlip() {
         });
         heroProfileFlip.addEventListener('mouseleave', stopEmojiStream);
     }
+}
+
+function initHamburgerMenu() {
+    const hamburger = document.getElementById('hamburger');
+    const headerNav = document.getElementById('header-nav');
+    const navButtons = document.querySelectorAll('.nav-btn');
+    
+    if (!hamburger || !headerNav) return;
+    
+    // Toggle menu when hamburger is clicked
+    hamburger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        hamburger.classList.toggle('active');
+        headerNav.classList.toggle('active');
+    });
+    
+    // Close menu when a nav button is clicked
+    navButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            headerNav.classList.remove('active');
+        });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!headerNav.contains(e.target) && !hamburger.contains(e.target)) {
+            hamburger.classList.remove('active');
+            headerNav.classList.remove('active');
+        }
+    });
 }
 
 console.log('Thomas Wright - Portfolio');
